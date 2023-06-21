@@ -51,16 +51,6 @@ class ProductController extends Controller
         
     }
 
-    public function pagination(Request $request)
-    {
-        $searchString = $request->search_string;
-        $products = Product::where('name','like','%'.$searchString.'%')
-                        ->orWhere('price','like','%'.$searchString.'%')
-                        ->orderBy('id','desc')
-                        ->paginate(5);
-        return view('render.paginations_products',['products' => $products])->render();
-    }
-
     public function searchProduct(Request $request)
     {
         $searchString = $request->search_string;

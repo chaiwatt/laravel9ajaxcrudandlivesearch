@@ -126,7 +126,7 @@
         function products(page,search_string)
         {
             $.ajax({
-                url:"/pagination/paginate-data?page="+page,
+                url:"/search-product?page="+page,
                 method: "GET",
                 data:
                 {
