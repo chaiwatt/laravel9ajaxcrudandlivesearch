@@ -127,7 +127,7 @@
         {
             $.ajax({
                 url:"/search-product?page="+page,
-                method: "GET",
+                method: "POST",
                 data:
                 {
                     search_string:search_string
@@ -142,7 +142,7 @@
             var search_string = $(this).val();
             $.ajax({
                 url: "{{ route('search.product') }}",
-                method: "GET",
+                method: "POST",
                 data:
                 {
                     search_string:search_string
